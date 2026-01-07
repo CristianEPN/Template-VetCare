@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetConnect</title>
+    <!-- Enlace de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- Enlace de CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/planes.css" />
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <!-- Topbar Start -->
+      <div id="topbar"></div>
+    <!-- Topbar End -->
+
+    <header class="sticky-top z-1030">
+      <!-- Navbar Start -->
+        <div id="navbar"></div>
+      <!-- Navbar End -->
+    </header>
+
+
+    <!-- Planes Start -->
+    <div class="container-fluid pt-5 pb-4">
+        <div class="container py-5">
+            <div class="d-flex flex-column text-center mb-5">
+                <h2 class="display-5 fw-bold mt-2">Nuestros <span class="text-primary">Planes</span></h2>
+                <p class="text-muted text-center fs-4">Escoge el mejor precio</p>
+            </div>
+            <div class="row g-4">
+                <!-- PLAN BÁSICO -->
+                <div class="col-lg-4">
+                    <div class="card pricing-card h-100 shadow-sm border-0 pb-3">
+                    <div class="pricing-header position-relative">
+                        <img src="img/basic.png" class="card-img-top" alt="Plan Básico">
+                        <div class="pricing-overlay text-center">
+                        <h3 class="text-white fw-bold">Básico</h3>
+                        <h1 class="price text-primary fw-bold">
+                            <small>$</small>49<span>/mes</span>
+                        </h1>
+                        </div>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <ul class="list-unstyled pricing-list">
+                        <li><i class="fa fa-check text-success me-2"></i>Consulta general</li>
+                        <li><i class="fa fa-check text-success me-2"></i>Hospitalización</li>
+                        <li><i class="fa fa-times text-danger me-2"></i>Peluquería</li>
+                        <li><i class="fa fa-times text-danger me-2"></i>Laboratorio</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-transparent border-0 text-center">
+                        <a href="citas.html?plan=basico" class="btn btn-outline-primary w-50 py-2"> Adquirir Plan</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- PLAN STANDARD (DESTACADO) -->
+                <div class="col-lg-4">
+                    <div class="card pricing-card featured h-100 shadow border-0 pb-4">
+                    <span class="badge bg-secondary pricing-badge fs-4">Más elegido</span>
+
+                    <div class="pricing-header position-relative">
+                        <img src="img/standard.png" class="card-img-top" alt="Plan Standard">
+                        <div class="pricing-overlay text-center">
+                        <h3 class="text-white fw-bold">Standard</h3>
+                        <h1 class="price text-primary fw-bold">
+                            <small>$</small>99<span>/mes</span>
+                        </h1>
+                        </div>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <ul class="list-unstyled pricing-list">
+                        <li><i class="fa fa-check text-success me-2"></i>Consulta general</li>
+                        <li><i class="fa fa-check text-success me-2"></i>Hospitalización</li>
+                        <li><i class="fa fa-check text-success me-2"></i>Peluquería</li>
+                        <li><i class="fa fa-times text-danger me-2"></i>Laboratorio</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-transparent border-0 text-center">
+                        <a href="citas.html?plan=standard" class="btn btn-outline-primary w-50 py-2">Adquirir Plan</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- PLAN PREMIUM -->
+                <div class="col-lg-4">
+                    <div class="card pricing-card h-100 shadow-sm border-0 pb-3">
+                    <div class="pricing-header position-relative">
+                        <img src="img/premium.png" class="card-img-top" alt="Plan Premium">
+                        <div class="pricing-overlay text-center">
+                        <h3 class="text-white fw-bold">Premium</h3>
+                        <h1 class="price text-primary fw-bold">
+                            <small>$</small>149<span>/mes</span>
+                        </h1>
+                        </div>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <ul class="list-unstyled pricing-list">
+                        <li><i class="fa fa-check text-success me-2"></i>Consulta general</li>
+                        <li><i class="fa fa-check text-success me-2"></i>Hospitalización</li>
+                        <li><i class="fa fa-check text-success me-2"></i>Peluquería</li>
+                        <li><i class="fa fa-check text-success me-2"></i>Laboratorio</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-transparent border-0 text-center">
+                        <a href="citas.html?plan=premium" class="btn btn-outline-primary w-50 py-2"> Adquirir Plan</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Planes End -->
+
+    <!-- Modal Start -->
+    <div id="contenedor-modal"></div>
+    <!-- Modal End -->
+
+    <!-- Footer Start -->
+      <div id="footer"></div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-to-top back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Start -->  
+     <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript Personalizado -->
+    <script src="js/main.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JavaScript End -->
+
+  </body>
+</html>

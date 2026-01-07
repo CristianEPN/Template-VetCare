@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetConnect</title>
+    <!-- Enlace de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- Enlace de CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/servicios.css" />
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <!-- Topbar Start -->
+      <div id="topbar"></div>
+    <!-- Topbar End -->
+
+    <header class="sticky-top z-1030">
+      <!-- Navbar Start -->
+        <div id="navbar"></div>
+      <!-- Navbar End -->
+    </header>
+
+    <!-- Hero Start -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <h1 class="fw-bold display-5">
+            Agenda la <span class="text-primary">Cita de tu Mascota</span>
+            </h1>
+            <p class="lead mt-3">
+            Atención profesional, rápida y con el cuidado que tu mejor amigo merece.
+            </p>
+        </div>
+    </section>
+    <!-- Hero End-->
+
+    <!-- Horarios Start -->
+    <section>
+        <div class="container text-center">
+            <h3 class="fw-bold mb-3">Horarios de Atención</h3>
+            <p>Lunes a Viernes: 8:00 AM – 7:00 PM</p>
+            <p>Sábados: 9:00 AM – 5:00 PM</p>
+            <p>Emergencias 24/7</p>
+        </div>
+    </section>
+    <!-- Horarios End -->
+
+    <!-- Formulario Start -->
+     <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <form class="row g-3 shadow p-4 rounded-4 bg-white">
+
+                <div class="col-md-6">
+                    <label class="form-label">Nombre del dueño</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Nombre de la mascota</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Plan seleccionado</label>
+                    <input type="text" id="planSeleccionado" class="form-control" readonly>
+                </div>
+
+
+                <div class="col-md-6">
+                    <label class="form-label">Servicio</label>
+                    <select class="form-select" required>
+                    <option selected disabled>Selecciona un servicio</option>
+                    <option>Consulta general</option>
+                    <option>Vacunación</option>
+                    <option>Peluquería</option>
+                    <option>Laboratorio</option>
+                    <option>Emergencias</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Fecha deseada</label>
+                    <input type="date" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Mensaje adicional</label>
+                    <textarea class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg rounded-pill px-5">
+                    Solicitar cita
+                    </button>
+                </div>
+
+                </form>
+
+            </div>
+            </div>
+        </div>
+    </section>
+    <!--Formulario End-->
+
+    <!-- Whatsapp Start -->
+    <section class="py-5 text-center">
+        <h4 class="fw-bold mb-3">¿Prefieres atención inmediata?</h4>
+        <a href="https://wa.me/593999999999" target="_blank" class="btn btn-primary btn-lg rounded-pill"> Agenda por WhatsApp </a>
+    </section>
+    <!-- Whatsapp End -->
+
+    <!-- Modal Start -->
+    <div id="contenedor-modal"></div>
+    <!-- Modal End -->
+    
+    <!-- Footer Start -->
+      <div id="footer"></div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-to-top back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Start -->  
+     <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript Personalizado -->
+    <script src="js/main.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JavaScript End -->
+
+  </body>
+</html>

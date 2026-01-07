@@ -1,0 +1,464 @@
+/* VARIABLES DE COLORES */
+:root {
+  --color-primario: #00bae9;
+  --color-secundario: #0b3954;
+  --color-bg: #EFEFEF;
+  --color-texto-dark: #0B3954;
+  --color-texto-light: #EFEFEF;
+  --color-verde: #70B052;
+  --color-verde-oscuro: #2D5A56;
+  --font-titulo: "Nunito", sans-serif;
+  --font-text: "Nunito Sans", sans-serif;
+}
+
+
+/* PERSONALIZAR COLORES DE BOOTSTRAP */
+/* Fondos personalizados */
+.bg-primary { background-color: var(--color-bg) !important; color: white; }
+.bg-secondary { background-color: var(--color-primario) !important; color: white; }
+.bg-dark { background-color: var(--color-verde-oscuro) !important; color: white; }
+.bg-light { background-color: var(--color-verde) !important; color: white; }
+.bg-hf { background-color: #cacaca !important; color: white; }
+
+/* Botones personalizados */
+.btn-primary {
+  background-color: var(--color-verde-oscuro);
+  border-color: var(--color-texto-dark);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-verde);
+  border-color: var(--color-texto-dark);
+  color: white;
+}
+
+.btn-outline-primary{
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primario);
+    color: white;
+    border-color: var(--color-primario);
+    transform: scale(1.1);
+}
+
+.btn-outline-secondary{
+    color: var(--color-verde);
+    border-color: var(--color-verde-oscuro);
+    font-weight: bold;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-verde);
+    color: white;
+    border-color: var(--color-verde);
+    transform: scale(1.1);
+}
+
+.btn-to-top{
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: white;
+}
+
+.btn-to-top:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: white;
+    transform: scale(1.1);
+}
+
+
+/* Texto personalizado */
+.text-dark { color: var(--color-texto-dark);}
+.text-light { color: var(--color-texto-light);}
+.text-contraste { color: var(--color-verde);}
+.text-primary { color: var(--color-primario) !important; }
+.text-secondary{ color: var(--color-verde-oscuro) !important; }
+.text-justify { text-align: justify; }
+.title {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+}
+
+
+/* AJUSTES GENERALES */
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--color-bg);
+  color: var(--color-texto-dark);
+}
+
+
+/* AJUSTES ESPECÍFICOS POR SECCIÓN */
+/* TOP-BAR SECTION */
+.top-bar{
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.top-bar a {
+  color: #212529;
+}
+
+/* Hover suave para iconos y links */
+.top-bar a,
+.top-bar i {
+  transition: color 0.3s ease;
+}
+
+.top-bar a:hover,
+.top-bar i:hover, 
+.top-bar .horario:hover,
+.top-bar #phone:hover{
+  color: var(--color-secundario); /* verde menta al pasar el mouse */
+}
+
+/* NAV-BAR SECTION */
+/* Hover suave para links del navbar */
+.navbar a,
+.navbar i {
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar i:hover {
+  color: var(--color-primario); /* verde menta al pasar el mouse */
+}
+
+.flex-column{
+  display: none;
+}
+
+.search-input{
+    display: none;
+}
+
+.display-6{
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link.active {
+  color: var(--color-primario) !important;
+  font-weight: 700;
+  position: relative;
+}
+
+.navbar .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primario);
+  border-radius: 10px;
+}
+
+
+/* HERO SECTION */
+/* TEXTO */
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  color: var(--color-verde);
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+/* CAROUSEL */
+.hero-slide {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 7s ease;
+}
+
+.carousel-item.active .hero-slide img {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 320px;
+  }
+}
+
+/* SECCION SERVICIOS */
+/* Estilos para las tarjetas de servicios */
+.service-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    height: 100%; /* Para que todas las cards midan lo mismo */
+}
+
+/* Efecto al pasar el mouse */
+.service-card:hover {
+    transform: translateY(-10px); /* Se eleva un poco */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important; /* Sombra más fuerte */
+    border-color: var(--primary); /* El borde cambia al color principal de tu marca */
+}
+
+/* Animación para el icono */
+.service-card:hover .icon-box i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para los textos */
+.text-muted {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.btn-outline-primary {
+    border-width: 2px;
+    font-weight: 600;
+}
+
+/* SECCION CONTADORES DE CONFIANZA */
+.stat-number {
+  transition: transform .3s ease;
+}
+
+.stat-number:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* SECCION SOBRE NOSOTROS */
+/* Animación para el texto */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-text {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Efecto hover para imágenes */
+.img-hover-effect {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* Estilo para el botón de cerrar del modal */
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Estilo para que la X sea blanca y resalte */
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+.btn-close-white:hover {
+    opacity: 1;
+}
+
+/* Sombras para las flechas para que se vean en imágenes claras */
+.modal-body .btn-link {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+}
+
+.modal-body .btn-link:hover {
+    transform: scale(1.2) translateY(-50%);
+    color: var(--color-primario);
+}
+
+/* SECCION EQUIPO */
+/* Contenedor principal de la tarjeta */
+.team {
+    position: relative;
+    overflow: hidden;
+}
+
+/* El contenedor del nombre y cargo */
+.team-text {
+    padding: 15px;
+    height: 80px; /* Altura fija para que coincida con el social */
+    transition: 0.5s;
+}
+
+/* El panel de redes sociales */
+.team-social {
+    position: absolute;
+    width: 100%;
+    height: 80px; /* Misma altura que .team-text */
+    bottom: -80px; /* Escondido justo debajo */
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+    background: #212529 !important; /* Color oscuro (bg-dark) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Efecto Hover */
+.team:hover .team-social {
+    bottom: 0; /* Sube a la posición del texto */
+    opacity: 1;
+}
+
+/* Opcional: Hace que el nombre suba o desaparezca suavemente */
+.team:hover .team-text {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* SECCION BLOG */
+/* Estilo base de la tarjeta */
+.card-custom {
+    transition: all 0.3s ease; /* Suaviza el movimiento */
+    border: none; /* Quitamos el borde si prefieres que la sombra mande */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mínima derecha e inferior */
+}
+
+/* Efecto al pasar el cursor */
+.card-custom:hover {
+    transform: translateY(-5px); /* Se eleva un poco */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* La sombra crece al elevarse */
+    
+}
+
+/* Cambio de color del cuerpo de la tarjeta en Hover */
+.card-custom:hover .card-body {
+    background-color: #e4eff9 !important; /* Un tono más claro o blanco */
+    transition: background-color 0.3s ease;
+}
+
+/* Para asegurar que los links no tengan subrayado feo */
+.card-custom a {
+    text-decoration: none;
+    color: #212529;
+}
+
+/* SECCION FOOTER */
+/* Esto hace que los campos sean visibles y reaccionen al hacer clic */
+.form-control {
+    background-color: #f1f1f1 !important; /* Un gris claro para que resalte del fondo blanco */
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    /* Sombra mínima hacia la derecha y abajo */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); 
+}
+
+.form-control:focus {
+    background-color: #ffffff !important;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+.animacion-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo base para los enlaces del footer */
+.flex-column a {
+    transition: all 0.3s ease; /* Suaviza el cambio de color y movimiento */
+    display: flex;
+    align-items: center;
+}
+
+/* Efecto al pasar el cursor sobre el enlace completo */
+.flex-column a:hover .enlace-foot, 
+.flex-column a:hover i {
+    color: var(--color-primario) !important; /* Cambia el color al celeste de tu marca */
+}
+
+/* Opcional: Pequeño desplazamiento a la derecha para dar dinamismo */
+.flex-column a:hover {
+    transform: translateX(5px);
+}
+
+/* BOTON PARA REGRESAR AL INICIO */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+    border-radius: 8px; 
+    transition: all 0.5s ease;
+}
+
+/* SERVICIOS.HTML */
+.testimonios img{
+    height: 80px;
+    width: 80px;
+}
+
+/* === CARDS TESTIMONIOS === */
+.card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+/* Hover principal */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* === CABECERA DEL CARD === */
+.card-head img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Imagen con efecto */
+.card:hover .card-head img {
+  transform: scale(1.1);
+}
+
+/* Nombre del cliente */
+.card-title {
+  transition: color 0.3s ease;
+}

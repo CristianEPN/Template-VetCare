@@ -1,0 +1,58 @@
+<!-- Cita Start -->
+    <div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <div class="modal-content">
+          <div class="modal-header text-primary text-center">
+            <h4 class="modal-title text-center fw-bold" id="exampleModalLabel">Agenda tu Cita - VetCare</h4>
+            <button type="button" class="btn-close btn-close-red" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 shadow p-4 rounded-4 bg-white">
+
+                <div class="col-12">
+                    <label class="form-label">Nombre del dueño</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Nombre de la mascota</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Servicio</label>
+                    <select class="form-select" required>
+                    <option selected disabled>Selecciona un servicio</option>
+                    <option>Consulta general</option>
+                    <option>Vacunación</option>
+                    <option>Peluquería</option>
+                    <option>Laboratorio</option>
+                    <option>Emergencias</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Fecha deseada</label>
+                    <input type="date" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Mensaje adicional</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg rounded-pill px-5">
+                    Solicitar cita
+                    </button>
+                </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- Cita End -->

@@ -128,8 +128,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar a:hover,
-.navbar i:hover {
+.navbar a:hover, .navbar i:hover {
   color: var(--color-primario); /* verde menta al pasar el mouse */
 }
 
@@ -160,6 +159,18 @@ body {
   height: 3px;
   background-color: var(--color-primario);
   border-radius: 10px;
+}
+
+.icon-close {
+  display: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .icon-close {
+  display: inline-block;
 }
 
 

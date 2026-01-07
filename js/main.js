@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPartial('topbar', 'parts/topbar.html');
 
   loadPartial('navbar', 'parts/navbar.html', () => {
-    initNavbar();
     setActiveMenu();
     window.dispatchEvent(new Event('resize'));
     if(document.getElementById('contenedor-modal')){
@@ -39,82 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* =====================================================
-   NAVBAR (búsqueda, toggler, etc.)
-===================================================== */
-function setActiveMenu() {
-  // Obtiene el nombre del archivo actual (ej: index.html, services.html)
-  const currentPage =
-    window.location.pathname.split("/").pop() || "index.html";
-
-  // Recorre todos los links del navbar
-  document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-
-    // Limpieza previa
-    link.classList.remove('active');
-
-    // Comparación exacta
-    if (href === currentPage) {
-      link.classList.add('active');
-    }
-  });
-}
-
-
-function initNavbar() {
-  const btn = document.querySelector("#btn-search");
-  const input = document.querySelector("#search");
-  const contenedor = document.querySelector("#contenedor-botones");
-
-  if (btn && input && contenedor) {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const esMovil = window.innerWidth <= 768;
-
-      if (input.style.display === "none" || input.style.display === "") {
-        input.style.display = "inline-block";
-        input.focus();
-
-        if (esMovil) {
-          contenedor.classList.remove("flex-row");
-          contenedor.classList.add("flex-column", "align-items-center");
-        }
-      } else {
-        if (input.value.trim() !== "") {
-          buscar(input.value);
-        }
-
-        input.value = "";
-        input.style.display = "none";
-        contenedor.classList.remove("flex-column");
-        contenedor.classList.add("flex-row", "align-items-center");
-      }
-    });
-  }
-
-  const navbarToggler = document.querySelector(".navbar-toggler");
-  const btnClose = document.querySelector(".btn-close");
-
-  if (navbarToggler && btnClose) {
-    navbarToggler.addEventListener("click", () => {
-      navbarToggler.classList.add("d-none");
-      btnClose.classList.remove("d-none");
-    });
-
-    btnClose.addEventListener("click", () => {
-      btnClose.classList.add("d-none");
-      navbarToggler.classList.remove("d-none");
-      document.querySelector(".navbar-collapse")?.classList.remove("show");
-    });
-  }
-}
-
-function buscar(texto) {
-  console.log("Buscando:", texto);
-}
-
-/* =====================================================
-   MENÚ ACTIVO
+  NAVBAR - MENÚ ACTIVO
 ===================================================== */
 function setActiveMenu() {
   const currentPage =
@@ -131,7 +55,7 @@ function setActiveMenu() {
 }
 
 /* =====================================================
-   HERO CAROUSEL
+   HERO - CAROUSEL
 ===================================================== */
 function initHero() {
   const carousel = document.querySelector('#vetcareCarousel');
@@ -157,7 +81,7 @@ function initHero() {
 }
 
 /* =====================================================
-   CONTADORES ANIMADOS
+  CONTADORES ANIMADOS
 ===================================================== */
 function initStatsCounters() {
   const statsSection = document.querySelector('.stats-section');
